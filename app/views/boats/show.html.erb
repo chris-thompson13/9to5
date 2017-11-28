@@ -6,3 +6,9 @@
   <li><%= @boat.location %></li>
   <li><%= @boat.amount %></li>
 </ul>
+
+
+
+
+<%= link_to 'Edit', edit_boat_path %>
+<%= link_to 'Destroy', boat_path, method: :delete, data: {confirm: 'are you really sure you want to delete this amazing Boat??'} %>
