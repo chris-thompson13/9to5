@@ -13,3 +13,29 @@
  *= require_tree .
  *= require_self
  */
+
+
+ nav {
+   text-decoration: none;
+   background-color: orange;
+   height: 50px;
+   width: 100%;
+   padding: 0;
+   position: fixed;
+   top: 0;
+
+ }
+
+ #signin, #logout, #signup, #boat-link, #jobs-link {
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  margin: 5px;
+  display: inline-block;
+  padding: 7px;
+}
+
+ #signin:hover, #logout:hover, #signup:hover, #boat-link:hover, #jobs-link:hover {
+  background-color: white;
+  color: black;
+ }
