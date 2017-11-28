@@ -35,7 +35,7 @@
   padding: 7px;
 }
 
- #signin:hover, #logout:hover, #signup:hover, #boat-link:hover {
+ #signin:hover, #logout:hover, #signup:hover, #boat-link:hover, #jobs-link:hover {
   background-color: white;
   color: black;
  }
