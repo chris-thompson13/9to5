@@ -1,21 +1,21 @@
 class BoatsController < ApplicationController
   #
-  # before_action :authenticate_user!
+  before_action :authenticate_user!
 
   def index
     @boats = Boat.all
   end
 
   def show
-    @boats = Boat.find(params[:id])
+    @boat = Boat.find(params[:id])
   end
 
   def new
-    @boats = Boat.new
+    @boat = Boat.new
   end
 
   def create
-    @boats = current_user.boats.new(boats_params)
+    @boat = current_user.boats.new(boats_params)
   end
 
   def edit
@@ -27,8 +27,8 @@ class BoatsController < ApplicationController
   end
 
   def destroy
-    @boats = Boats.find(params[:id])
-    @boats.destroy
+    @boat = Boats.find(params[:id])
+    @boat.destroy
       redirect_to root_path
   end
 
