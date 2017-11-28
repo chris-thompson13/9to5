@@ -1,0 +1,12 @@
+<h1>Create a new boat</h1>
+
+<%= form_with model: @boat do |f| %>
+<%= hidden_field_tag :user_id %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<br>
+<%= f.label :location %>
+<%= f.text_field :location %>
+<br>
+<%= f.submit %>
+<% end %>
