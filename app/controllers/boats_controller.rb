@@ -11,11 +11,11 @@ class BoatsController < ApplicationController
   end
 
   def new
-    @boat = Boat.new
+    @boat = Boat.new(params[:id])
   end
 
   def create
-    @boat = User.boats.create(boat_params)
+    @boat = User.boats.new(boat_params)
     if @boat.save
       redirect_to root_path
     else
