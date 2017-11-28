@@ -1,7 +1,7 @@
 <h1>Here are your boats</h1>
 
 <% @boats.each do |boat| %>
-<li><a href="/boats/<% boat.id %>"><%= boat.name %></a></li>
+<li><a href="/boats/<%= boat.id %>"><%= boat.name %></a></li>
 <br>
 <% end %>
 
