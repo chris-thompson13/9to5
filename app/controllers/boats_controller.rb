@@ -27,11 +27,16 @@ class BoatsController < ApplicationController
   end
 
   def update
-
+    @boat = Boat.find(params[:id])
+    if @boat.update(boat_params)
+      redirect_to boat_path
+    else
+      render 'edit'
+    end
   end
 
   def destroy
-    @boat = Boats.find(params[:id])
+    @boat = Boat.find(params[:id])
     @boat.destroy
       redirect_to root_path
   end
@@ -41,5 +46,11 @@ class BoatsController < ApplicationController
     params.require(:boat).permit(:name, :location, :amount)
   end
 
+
+
+    def find_params
+    	@boat = Boat.find(params[:id])
+
+  end
 
   end
