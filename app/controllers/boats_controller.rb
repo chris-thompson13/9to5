@@ -1,6 +1,6 @@
 class BoatsController < ApplicationController
-
-  before_action :authenticate_user!
+  #
+  # before_action :authenticate_user!
 
   def index
     @boats = Boat.all
@@ -16,7 +16,6 @@ class BoatsController < ApplicationController
 
   def create
     @boats = current_user.boats.new(boats_params)
-
   end
 
   def edit
