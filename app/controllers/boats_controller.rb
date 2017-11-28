@@ -3,15 +3,15 @@ class BoatsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @boats = Boats.all
+    @boats = Boat.all
   end
 
   def show
-    @boats = Boats.find(params[:id])
+    @boats = Boat.find(params[:id])
   end
 
   def new
-    @boats = Boats.new
+    @boats = Boat.new
   end
 
   def create
