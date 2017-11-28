@@ -4,6 +4,7 @@ class CreateBoats < ActiveRecord::Migration[5.1]
       t.string :name
       t.string :location
       t.integer :amount
+      t.integer :user_id
 
       t.timestamps
     end

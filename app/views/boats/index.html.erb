@@ -1,6 +1,8 @@
 <h1>Here are your boats</h1>
 
-<li><a href="/boats/:id"><%= @boats.name %></a></li>
+<% @boats.each do |boat| %>
+<li><a href="/boats/<% boat.id %>"><%= boat.name %></a></li>
 <br>
+<% end %>
 
 <%= link_to 'Add a new boat', new_boat_path %>

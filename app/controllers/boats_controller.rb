@@ -7,7 +7,7 @@ class BoatsController < ApplicationController
   end
 
   def show
-    @boat = Boat.find(params[:id])
+    @boat = Boat.find_by_id(params[:id])
   end
 
   def new
@@ -15,7 +15,12 @@ class BoatsController < ApplicationController
   end
 
   def create
-    @boat = current_user.boats.new(boats_params)
+    @boat = User.boats.create(boat_params)
+    if @boat.save
+      redirect_to root_path
+    else
+      render 'new'
+    end
   end
 
   def edit
@@ -30,6 +35,11 @@ class BoatsController < ApplicationController
     @boat = Boats.find(params[:id])
     @boat.destroy
       redirect_to root_path
+  end
+
+  private
+  def boat_params
+    params.require(:boat).permit(:name, :location, :amount)
   end
 
 
