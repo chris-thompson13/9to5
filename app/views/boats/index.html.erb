@@ -1,4 +1,16 @@
 <h1>Here are your boats</h1>
+<br>
+
+<br>
+<br>
+
+<div class="nav2">
+  <ul>
+    <br>
+     <div class="container2">
+
+       <%= link_to 'Add a new boat', new_boat_path %>
+
 
 <% current_user.boats.each do |boat| %>
 <li><a href="/boats/<%= boat.id %>"><%= boat.name %></a></li>
@@ -6,4 +18,8 @@
 <br>
 <% end %>
 
-<%= link_to 'Add a new boat', new_boat_path %>
+ 
+<% end %>
+</div >
+</ul>
+</div >

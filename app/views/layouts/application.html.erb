@@ -3,13 +3,15 @@
   <head>
     <title>NinetoFive</title>
     <%= csrf_meta_tags %>
-
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,100' rel='stylesheet' type='text/css'>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
+  <div class="header">
+    <div class="container">
   <body>
-    <nav>
+
+    <nav class="btn" >
     <% if !user_signed_in? %>
     <%= link_to 'Sign in', new_user_session_path, {id: "signin" } %>
     <%= link_to 'Sign up', new_user_registration_path, {id: "signup"} %>
@@ -20,12 +22,13 @@
     <%= link_to 'Log out', destroy_user_session_path, {id: "logout", method: :delete, data: {confirm: "Are you sure you want to log out?"}} %>
     <% end %>
 
-    </nav>
-    <br>
-    <br>
-
     <p class="notice"><%= notice %></p>
      <p class="alert"><%= alert %></p>
     <%= yield %>
+    </nav>
+
   </body>
+</div>
+    </div>
+
 </html>
