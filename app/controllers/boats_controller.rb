@@ -2,6 +2,7 @@ class BoatsController < ApplicationController
     before_action :authenticate_user!
 
   def index
+    current_user
     @boats = Boat.all
   end
 
@@ -43,7 +44,7 @@ class BoatsController < ApplicationController
 
   private
   def boat_params
-    params.require(:boat).permit(:name, :location, :amount)
+    params.require(:boat).permit(:name, :location, :amount, :avatar)
   end
 
 
