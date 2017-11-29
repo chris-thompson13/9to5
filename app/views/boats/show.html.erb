@@ -1,14 +1,16 @@
 <h1>THIS BOAT IS:</h1>
 
+<div class="nav2">
+     <div class="container2">
+       <ul>
+         <li><%= @boat.name %></li>
+         <li><%= @boat.location %></li>
+         <li><%= @boat.amount %></li>
+       </ul>
+<br>
 
-<ul>
-  <li><%= @boat.name %></li>
-  <li><%= @boat.location %></li>
-  <li><%= @boat.amount %></li>
-</ul>
+       <%= link_to 'Edit', edit_boat_path %>
+       <%= link_to 'Destroy', boat_path, method: :delete, data: {confirm: 'are you really sure you want to delete this amazing Boat??'} %>
 
-
-
-
-<%= link_to 'Edit', edit_boat_path %>
-<%= link_to 'Destroy', boat_path, method: :delete, data: {confirm: 'are you really sure you want to delete this amazing Boat??'} %>
+     </div>
+   </div>
