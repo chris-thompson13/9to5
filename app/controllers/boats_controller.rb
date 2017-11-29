@@ -2,6 +2,7 @@ class BoatsController < ApplicationController
     before_action :authenticate_user!
 
   def index
+    current_user
     @boats = Boat.all
   end
 
