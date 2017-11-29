@@ -16,7 +16,7 @@
     <% end %>
     <% if user_signed_in? %>
     <%= link_to 'Boats', root_path, {id: "boat-link"} %>
-    <%= link_to 'Jobs', jobs_index_path, {id: "jobs-link"} %>
+    <%= link_to 'Jobs', jobs_path, {id: "jobs-link"} %>
     <%= link_to 'Log out', destroy_user_session_path, {id: "logout", method: :delete, data: {confirm: "Are you sure you want to log out?"}} %>
     <% end %>
 
