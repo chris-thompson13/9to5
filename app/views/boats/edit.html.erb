@@ -5,8 +5,8 @@
 <%= f.text_field :name %>
 <br>
 <%= f.label :location %>:
-<%= select_tag(:location, options_for_select([['New York', 1], ['Boston', 2], ['Los Angeles', 3], ['Shanghai', 4], ['Singapore', 5], ['Manila', 6], ['Seattle', 7], ['Vancouver', 8], ['Antwerp', 9], ['Hamburg', 10],
-  ])) %>
+<%= select(:boat, :location, [['New York', 'New York'], ['Boston', 'Boston'], ['Los Angeles', 'Los Angeles'], ['Shanghai', 'Shanghai'], ['Singapore', 'Singapore'], ['Manila', 'Manila'], ['Seattle', 'Seattle'], ['Vancouver', 'Vancouver'], ['Antwerp', 'Antwerp'], ['Hamburg', 'Hamburg']
+  ]) %>
   <br>
 
 <%= f.label :containers %>:
