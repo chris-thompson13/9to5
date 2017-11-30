@@ -3,16 +3,28 @@
 <div class="nav2">
      <div class="container2">
        <ul>
-         <li><%= image_tag @boat.avatar.url(:thumb) %></li>
-         <li>Name: <%= @boat.name %></li>
-         <li>Location: <%= @boat.location %></li>
-         <li>Number of containers: <%= @boat.amount %></li>
+         <% if @boat.avatar.file? %>
+      <%= image_tag @boat.avatar.url(:thumb) %>
+      <% else %>
+      No photo!
+    <% end %>
+         <li><b>Name:</b> <%= @boat.name %></li>
+         <li><b>Location:</b> <%= @boat.location %></li>
+         <li><b>Number of containers:</b> <%= @boat.amount %></li>
        </ul>
-<br>
 
+        <h2>This Boat's Jobs</h2>
+        <% @boat.jobs.each do |boat| %>
+        <li><a href="/jobs/<%= job.id %>"><%= job.name %></a></li>
+        <% end %>
+
+<br>
+      <%= link_to 'Add a job', new_job_path %>
        <%= link_to 'Edit', edit_boat_path %>
        <%= link_to 'Destroy', boat_path, method: :delete, data: {confirm: 'are you really sure you want to delete this amazing Boat??'} %>
 
 
      </div>
    </div>
+
+   if @boat.avatar is nil?

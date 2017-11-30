@@ -1,11 +1,11 @@
-<h1>Edit this boat's information</h1>
+<h1>Edit boat</h1>
 <%= form_with model: @boat do |f| %>
 <%= hidden_field_tag :user_id %>
 <%= f.label :name %>:
 <%= f.text_field :name %>
 <br>
 <%= f.label :location %>:
-<%= select(:boat, :location, [['New York', 'New York'], ['Boston', 'Boston'], ['Los Angeles', 'Los Angeles'], ['Shanghai', 'Shanghai'], ['Singapore', 'Singapore'], ['Manila', 'Manila'], ['Seattle', 'Seattle'], ['Vancouver', 'Vancouver'], ['Antwerp', 'Antwerp'], ['Hamburg', 'Hamburg']
+<%= select(:boat, :location, [['New York'], ['Boston'], ['Los Angeles'], ['Shanghai'], ['Singapore'], ['Manila'], ['Seattle'], ['Vancouver'], ['Antwerp'], ['Hamburg']
   ]) %>
   <br>
 
