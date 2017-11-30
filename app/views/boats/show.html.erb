@@ -3,10 +3,10 @@
 <div class="nav2">
      <div class="container2">
        <ul>
-         <li><%= image_tag @boat.avatar.url(:medium) %></li>
-         <li><%= @boat.name %></li>
-         <li><%= @boat.location %></li>
-         <li><%= @boat.amount %></li>
+         <li><%= image_tag @boat.avatar.url(:thumb) %></li>
+         <li>Name: <%= @boat.name %></li>
+         <li>Location: <%= @boat.location %></li>
+         <li>Number of containers: <%= @boat.amount %></li>
        </ul>
 <br>
 

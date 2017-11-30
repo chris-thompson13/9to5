@@ -67,6 +67,7 @@ body {
 .header .container2 {
   position: relative;
   top:  0px;
+  display: inline;
 }
 
 .header h1 {
@@ -146,13 +147,12 @@ body {
   padding: 0 10px;
   transition: background .5s;
 }
-.btn:hover, .nav ul li:hover {
+.nav ul li:hover {
   background: #117bff;
   cursor: pointer;
   transition: background .5s;
 }
-.btn:hover, .nav2 ul li:hover {
-   
+.nav2 ul li:hover {
   cursor: pointer;
   transition: background .5s;
 }
