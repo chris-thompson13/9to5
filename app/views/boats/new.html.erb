@@ -2,16 +2,17 @@
 
 <%= form_with model: @boat do |f| %>
 <%= hidden_field_tag :user_id %>
-<%= f.label :name %>
+<%= f.label :name %>:
 <%= f.text_field :name %>
 <br>
-<%= f.label :location %>
-<%= f.text_field :location %>
+<%= f.label :location %>:
+<%= select(:boat, :location, [['New York', 'New York'], ['Boston', 'Boston'], ['Los Angeles', 'Los Angeles'], ['Shanghai', 'Shanghai'], ['Singapore', 'Singapore'], ['Manila', 'Manila'], ['Seattle', 'Seattle'], ['Vancouver', 'Vancouver'], ['Antwerp', 'Antwerp'], ['Hamburg', 'Hamburg']
+  ]) %>
 <br>
-<%= f.label :containers %>
+<%= f.label :containers %>:
 <%= f.text_field :amount %>
 <br>
-<%= f.label :boat_picture %>
+<%= f.label :boat_picture %>:
 <%= f.file_field :avatar %>
 <br>
 <%= f.submit %>

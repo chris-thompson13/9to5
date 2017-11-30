@@ -8,6 +8,7 @@ class BoatsController < ApplicationController
 
   def show
     @boat = Boat.find_by_id(params[:id])
+
   end
 
   def new

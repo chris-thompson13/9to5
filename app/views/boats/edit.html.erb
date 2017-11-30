@@ -1,15 +1,17 @@
-<h1>Edit this boats information</h1>
+<h1>Edit this boat's information</h1>
 <%= form_with model: @boat do |f| %>
 <%= hidden_field_tag :user_id %>
-<%= f.label :name %>
+<%= f.label :name %>:
 <%= f.text_field :name %>
 <br>
-<%= f.label :location %>
-<%= f.text_field :location %>
-<br>
-<%= f.label :containers %>
+<%= f.label :location %>:
+<%= select_tag(:location, options_for_select([['New York', 1], ['Boston', 2], ['Los Angeles', 3], ['Shanghai', 4], ['Singapore', 5], ['Manila', 6], ['Seattle', 7], ['Vancouver', 8], ['Antwerp', 9], ['Hamburg', 10],
+  ])) %>
+  <br>
+
+<%= f.label :containers %>:
 <%= f.text_field :amount %>
 <br>
-<%= f.file_field :avatar %>
+<b>Picture of boat:</b> <%= f.file_field :avatar %><br>
 <%= f.submit %>
 <% end %>
