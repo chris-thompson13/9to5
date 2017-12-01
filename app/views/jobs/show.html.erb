@@ -9,11 +9,14 @@
          <li>Cost: <%= @job.cost %></li>
          <li>Amount of containers: <%= @job.amount %></li>
        </ul>
-       <h2>Boats</h2>s
+       <h2>Select a boat for job</h2>s
         <% @boats.each do |boat| %>
-        <li><a href="/boat/<%= boat.id %>"><%= boat.name %></a></li>
+        <div class = "inline"><a href="/boats/<%= boat.id %>"><%= boat.name %></a></div>
         <% end %>
 <br>
+<div class="spacer">
+
+</div>
 
        <%= link_to 'Edit', edit_boat_path %>
        <%= link_to 'New Job', new_job_path %>
