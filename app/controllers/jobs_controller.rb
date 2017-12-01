@@ -8,6 +8,7 @@ class JobsController < ApplicationController
   def show
     @job = Job.find_by_id(params[:id])
     @boats = Boat.all
+    @jobs = Job.all
 
 
   end
