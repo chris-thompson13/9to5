@@ -1,8 +1,5 @@
 <h1>Your boats</h1>
-<br>
 
-<br>
-<br>
 
 <div class="nav2">
   <ul>
@@ -13,7 +10,8 @@
 
 
 <% current_user.boats.each do |boat| %>
-<li><a href="/boats/<%= boat.id %>"><%= boat.name %></a></li>
+
+<li id="list"><a href="/boats/<%= boat.id %>"><%= boat.name %></a></li>
 <% end %>
 
 
