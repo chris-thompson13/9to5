@@ -31,6 +31,7 @@ a {
    cursor: pointer;
    transition: background .5s;
  }
+
  html, body {
   margin: 0;
   padding: 0;
@@ -42,22 +43,29 @@ body {
 }
 
 .container {
+  background: #117bff;
   margin: 0 auto;
-  max-width: 1040px;
+  max-width:940px;
   padding: 0 10px;
+  height: 50%;
 }
 
 .container2 {
   margin: 0 auto;
   max-width: 940px;
   padding: 0 10px;
-  height:90%;
+  height: 250px;
+
 }
 
+#container {
+  height: 250px;
+}
 .header {
   background: url(https://images.pexels.com/photos/167676/pexels-photo-167676.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb) no-repeat center center;
   background-size: cover;
   text-align: center;
+  height: 1100px;
 }
 
 .header .container {
@@ -67,10 +75,17 @@ body {
 .header .container2 {
   position: relative;
   top:  0px;
+
   display: inline;
+  padding: 20px;
 }
 
 .header h1 {
+  color: #fff;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+.header h2 {
   color: #fff;
   font-size: 30px;
   text-transform: uppercase;
@@ -100,42 +115,35 @@ body {
   transition: background .5s;
 }
 
-.nav {
-  background: #000;
-  width: 100%;
-}
-.nav2 {
 
-  width: 100%;
-}
 
 .nav ul {
 
-  list-style: none;
-  margin: 0 auto;
-  padding: 100px;
+
 }
 .nav2 ul {
 
   list-style: none;
   margin: 0 auto;
-  padding: 0;
+  padding: 20px;
   background-color: black;
+  height: 340px;
 }
 
 .nav ul li {
   color: #fff;
   display: inline-block;
   list-style: none;
-  padding: 0 10px;
+  padding:   0px;
   transition: background .5s;
 }
 .nav2 ul li {
   color: #fff;
   display: inline-block;
   list-style: none;
-  padding: 0 10px;
+  padding: 0 0px;
   transition: background .5s;
+  margin: auto;
 }
 .nav ul li:hover {
   background: #117bff;
@@ -159,10 +167,7 @@ body {
   margin: 50px 80px 50px 0;
 }
 
-.spacer{
-  display: block;
-  height: 200px;
-}
+
 
 .jumbotron .container {
   position: relative;
@@ -197,7 +202,10 @@ body {
 
 }*/
 
-
+#list {
+  padding: 15px;
+  margin: 5px;
+}
 
 /*
 .mySlides {display:none}*/
@@ -208,3 +216,7 @@ body {
   position: relative;
   margin: auto;
 }*/
+
+li {
+  padding: 20px;
+}
