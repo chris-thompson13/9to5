@@ -1,9 +1,6 @@
-<h1>Jobs#index</h1>
-<h1>Your jobs</h1>
-<br>
 
-<br>
-<br>
+<h2>Your jobs</h2>
+ 
 
 <div class="nav2">
   <ul>
@@ -12,7 +9,7 @@
 
 
 <% current_user.boats.each do |job| %>
-<li><a href="/jobs/<%= job.id %>"><%= job.name %></a></li>
+<li id="list"><a href="/jobs/<%= job.id %>"><%= job.name %></a></li>
 <% end %>
 
 
