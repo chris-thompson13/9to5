@@ -2,6 +2,7 @@ class JobsController < ApplicationController
   def index
     current_user
     @jobs = Job.all
+
   end
 
   def show

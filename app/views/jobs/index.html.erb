@@ -11,8 +11,8 @@
      <div class="container2">
 
 
-<% current_user.boats.each do |job| %>
-<li><a href="/jobs/<%= job.id %>"><%= job.name %></a></li>
+<% @jobs.each do |job| %>
+<li><a href="/jobs/<%= job.id %>"><%= job.description %></a></li>
 <% end %>
 
 
