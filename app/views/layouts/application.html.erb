@@ -8,7 +8,44 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <div class="header">
+    <!-- <div class="slideshow-container"> -->
+
+    <!-- <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="https://images.pexels.com/photos/104346/pexels-photo-104346.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb" style="width:100%">
+      <div class="text">Caption Text</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="https://images.pexels.com/photos/439396/pexels-photo-439396.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb" style="width:100%">
+      <div class="text">Caption Two</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="https://images.pexels.com/photos/167676/pexels-photo-167676.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb" style="width:100%">
+      <div class="text">Caption Three</div>
+    </div> -->
+<!--
+    </div> -->
+
+
+    <!-- <div class="slideshow">
+            <img class="slide" src="https://images.pexels.com/photos/104346/pexels-photo-104346.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb" alt="">
+            <img class="slide" src="https://images.pexels.com/photos/439396/pexels-photo-439396.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb" alt="">
+            <img class="slide" src="https://images.pexels.com/photos/163726/belgium-antwerp-shipping-container-163726.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb" alt="">
+            <img class="slide" src="https://images.pexels.com/photos/70418/pexels-photo-70418.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb" alt="">
+            <img class="slide" src="https://images.pexels.com/photos/275543/pexels-photo-275543.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb" alt="">
+            <img class="slide" src="https://images.pexels.com/photos/80404/harbour-boat-sea-plane-80404.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb" alt="">
+  </div> -->
+
+
+
     <div class="container">
+
+
+
   <body>
 
     <nav class="btn" >
@@ -16,6 +53,8 @@
     <%= link_to 'Sign in', new_user_session_path, {id: "signin" } %>
     <%= link_to 'Sign up', new_user_registration_path, {id: "signup"} %>
     <% end %>
+
+    </nav>
     <% if user_signed_in? %>
     <%= link_to 'Boats', root_path, {id: "boat-link"} %>
     <%= link_to 'Jobs', jobs_path, {id: "jobs-link"} %>
@@ -25,8 +64,6 @@
     <p class="notice"><%= notice %></p>
      <p class="alert"><%= alert %></p>
     <%= yield %>
-    </nav>
-
   </body>
 </div>
     </div>
