@@ -1,4 +1,7 @@
 <h1>Edit this boat's information</h1>
+<div id="label">
+
+ 
 <%= form_with model: @boat do |f| %>
 <%= hidden_field_tag :user_id %>
 <%= f.label :name %>:
@@ -15,3 +18,4 @@
 <b>Picture of boat:</b> <%= f.file_field :avatar %><br>
 <%= f.submit %>
 <% end %>
+</div>
