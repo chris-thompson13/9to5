@@ -2,18 +2,22 @@
 
 <%= form_with model: @job do |f| %>
 <%= hidden_field_tag :user_id %>
-<%= f.label :name %>:
-<%= f.text_field :name %>
+<%= f.label :description %>:
+<%= f.text_field :description %>
 <br>
-<%= f.label :location %>:
-<%= select(:boat, :location, [['New York', 'New York'], ['Boston', 'Boston'], ['Los Angeles', 'Los Angeles'], ['Shanghai', 'Shanghai'], ['Singapore', 'Singapore'], ['Manila', 'Manila'], ['Seattle', 'Seattle'], ['Vancouver', 'Vancouver'], ['Antwerp', 'Antwerp'], ['Hamburg', 'Hamburg']
+<%= f.label :origin %>:
+<%= select(:job, :origin, [['New York', 'New York'], ['Boston', 'Boston'], ['Los Angeles', 'Los Angeles'], ['Shanghai', 'Shanghai'], ['Singapore', 'Singapore'], ['Manila', 'Manila'], ['Seattle', 'Seattle'], ['Vancouver', 'Vancouver'], ['Antwerp', 'Antwerp'], ['Hamburg', 'Hamburg']
   ]) %>
 <br>
-<%= f.label :containers %>:
-<%= f.text_field :amount %>
+<%= f.label :destination %>:
+<%= select(:job, :destination, [['New York', 'New York'], ['Boston', 'Boston'], ['Los Angeles', 'Los Angeles'], ['Shanghai', 'Shanghai'], ['Singapore', 'Singapore'], ['Manila', 'Manila'], ['Seattle', 'Seattle'], ['Vancouver', 'Vancouver'], ['Antwerp', 'Antwerp'], ['Hamburg', 'Hamburg']
+]) %>
 <br>
-<%= f.label :boat_picture %>:
-<%= f.file_field :avatar %>
+<%= f.label :cost %>:
+<%= f.text_field :cost %>
+<br>
+<%= f.label :containers %>:
+<%= f.text_field :containers %>
 <br>
 <%= f.submit %>
 <% end %>

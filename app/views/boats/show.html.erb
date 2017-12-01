@@ -8,6 +8,10 @@
          <li>Location: <%= @boat.location %></li>
          <li>Number of containers: <%= @boat.amount %></li>
        </ul>
+       <h2>This Boat's Jobs</h2>
+        <% @jobs.each do |job| %>
+        <div class = "inline"><a href="/jobs/<%= job.id %>"><%= job.description %></a></div>
+        <% end %>
 <br>
 
        <%= link_to 'Edit', edit_boat_path %>

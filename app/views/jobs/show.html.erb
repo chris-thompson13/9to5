@@ -1,2 +1,25 @@
 <h1>Jobs#show</h1>
-<p>Find me in app/views/jobs/show.html.erb</p>
+
+<div class="nav2">
+     <div class="container2">
+       <ul>
+         <li>Description: <%= @job.description %></li>
+         <li>Origin: <%= @job.origin %></li>
+         <li>Destination: <%= @job.destination %></li>
+         <li>Cost: <%= @job.cost %></li>
+         <li>Amount of containers: <%= @job.amount %></li>
+       </ul>
+       <h2>Boats</h2>s
+        <% @boats.each do |boat| %>
+        <li><a href="/boat/<%= boat.id %>"><%= boat.name %></a></li>
+        <% end %>
+<br>
+
+       <%= link_to 'Edit', edit_boat_path %>
+       <%= link_to 'New Job', new_job_path %>
+
+       <%= link_to 'Destroy', boat_path, method: :delete, data: {confirm: 'are you really sure you want to delete this amazing Boat??'} %>
+
+
+     </div>
+   </div>
