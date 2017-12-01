@@ -1,2 +1,22 @@
 <h1>Jobs#index</h1>
-<p>Find me in app/views/jobs/index.html.erb</p>
+<h1>Your jobs</h1>
+<br>
+
+<br>
+<br>
+
+<div class="nav2">
+  <ul>
+    <br>
+     <div class="container2">
+
+
+<% current_user.boats.each do |job| %>
+<li><a href="/jobs/<%= job.id %>"><%= job.name %></a></li>
+<% end %>
+
+
+
+</div >
+</ul>
+</div >
