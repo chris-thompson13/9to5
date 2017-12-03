@@ -50,6 +50,9 @@ class BoatsController < ApplicationController
     params.require(:boat).permit(:name, :location, :amount, :avatar, :job_id, :boat_id, current_user.id)
   end
 
+  def job_params
+    params.permit(:description, :origin, :destination, :cost, :amount, :boat_id, current_user.id, :job_id, :job_ids)
+  end
 
 
     def find_params

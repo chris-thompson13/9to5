@@ -3,9 +3,11 @@
 one:
   name: MyString
   location: MyString
-  amount: 1
+  amount: MyString
+  user_id: MyString
 
 two:
   name: MyString
   location: MyString
-  amount: 1
+  amount: MyString
+  user_id: MyString
