@@ -9,7 +9,8 @@
 
 
 <% @jobs.each do |job| %>
-<li><a href="/jobs/<%= job.id %>"><%= job.description %></a></li>
+<li><a href="/jobs/<%= job.id %>"><%= job.name %></a></li>
+
 <% end %>
 
 

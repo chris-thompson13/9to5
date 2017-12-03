@@ -1,2 +1,29 @@
-<h1>Jobs#edit</h1>
-<p>Find me in app/views/jobs/edit.html.erb</p>
+<h1>Edit this job</h1>
+
+<%= form_with model: @job do |f| %>
+<%= hidden_field_tag :user_id %>
+<%= f.label :name %>:
+<%= f.text_field :name %>
+<br>
+<%= f.label :description %>:
+<%= f.text_field :description %>
+<br>
+<%= f.label :destination %>:
+<%= select(:job, :destination, [['New York', 'New York'], ['Boston', 'Boston'], ['Los Angeles', 'Los Angeles'], ['Shanghai', 'Shanghai'], ['Singapore', 'Singapore'], ['Manila', 'Manila'], ['Seattle', 'Seattle'], ['Vancouver', 'Vancouver'], ['Antwerp', 'Antwerp'], ['Hamburg', 'Hamburg']
+  ]) %>
+  <br>
+
+  <%= f.label :origin %>:
+  <%= select(:job, :origin, [['New York', 'New York'], ['Boston', 'Boston'], ['Los Angeles', 'Los Angeles'], ['Shanghai', 'Shanghai'], ['Singapore', 'Singapore'], ['Manila', 'Manila'], ['Seattle', 'Seattle'], ['Vancouver', 'Vancouver'], ['Antwerp', 'Antwerp'], ['Hamburg', 'Hamburg']
+    ]) %>
+    <br>
+
+<%= f.label :cost %>:
+<%= f.text_field :cost %>
+<br>
+<%= f.label :containers %>:
+<%= f.text_field :amount %>
+<br>
+
+<%= f.submit %>
+<% end %>

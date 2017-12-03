@@ -1,17 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  name: MyString
   description: MyString
-  origin: MyString
-  destination: MyString
-  cost: 1
-  amount: 1
-  user_id: 1
+  cost: MyString
+  amount: MyString
+  user_id: MyString
 
 two:
+  name: MyString
   description: MyString
-  origin: MyString
-  destination: MyString
-  cost: 1
-  amount: 1
-  user_id: 1
+  cost: MyString
+  amount: MyString
+  user_id: MyString
